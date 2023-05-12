@@ -3,7 +3,7 @@
 'require rpc';
 
 return baseclass.extend({
-	title       : _('Temperature'),
+	title       : _('温度'),
 
 	tempWarning : 90,
 
@@ -24,8 +24,8 @@ return baseclass.extend({
 
 		let tempTable = E('table', { 'class': 'table' },
 			E('tr', { 'class': 'tr table-titles' }, [
-				E('th', { 'class': 'th left', 'width': '33%' }, _('Sensor')),
-				E('th', { 'class': 'th left' }, _('Temperature')),
+				E('th', { 'class': 'th left', 'width': '33%' }, _('传感器')),
+				E('th', { 'class': 'th left' }, _('温度')),
 			])
 		);
 
@@ -58,13 +58,13 @@ return baseclass.extend({
 							E('td', {
 									'class'     : 'td left',
 									'style'     : cellStyle,
-									'data-title': _('Sensor')
+									'data-title': _('传感器')
 								},
 								name
 							),
 							E('td', { 'class'  : 'td left',
 									'style'     : cellStyle,
-									'data-title': _('Temperature')
+									'data-title': _('温度')
 								},
 								(temp === undefined) ? '-' : temp + ' °C'),
 						])
