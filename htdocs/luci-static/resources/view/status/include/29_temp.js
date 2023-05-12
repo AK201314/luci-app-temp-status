@@ -34,7 +34,9 @@ return baseclass.extend({
 
 			for(let i of Object.values(v)) {
 				let sensor = i.title || i.item;
-
+				if(i.item.indexOf('hwmon')>=0) {
+					continue;
+				};
 				if(i.sources === undefined) {
 					continue;
 				};
